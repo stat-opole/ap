@@ -5,19 +5,19 @@ Survey
 
 var json = {
     locale:"pl",
-    title: "American History",
+    title: "Test PSR2020",
     showProgressBar: "bottom",
     showTimerPanel: "top",
     maxTimeToFinishPage: 10,
     maxTimeToFinish: 25,
     firstPageIsStarted: true,
-    startSurveyText: "Start Quiz",
+    startSurveyText: "PSR2020",
     pages: [
         {
             questions: [
                 {
                     type: "html",
-                    html: "You are about to start quiz by history. <br/>You have 10 seconds for every page and 25 seconds for the whole survey of 3 questions.<br/>Please click on <b>'Start Quiz'</b> button when you are ready."
+                    html: "You are about to start quiz by history. <br/>You have 10 seconds for every page and 25 seconds for the whole survey of 3 questions.<br/>Please click on <b>'Rozpocznij test'</b> button when you are ready."
                 }
             ]
         }, {
