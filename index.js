@@ -73,5 +73,5 @@ survey
             .querySelector('#surveyResult')
             .textContent = "Result JSON:\n" + JSON.stringify(result.data, null, 3);
     });
-
+survey.locale = 'pl';
 $("#surveyElement").Survey({model: survey});
