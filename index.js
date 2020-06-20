@@ -3,7 +3,7 @@ Survey
     .applyTheme("modern");
 
 var json = {
-    locale:"pl",
+    
     title: "American History",
     showProgressBar: "bottom",
     showTimerPanel: "top",
