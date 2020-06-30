@@ -29,16 +29,16 @@ const memoryGame = {
     moveCount : 0, //liczba ruchów
     dataczas : 0, //data i czas
     tilesImg : [ //grafiki dla klocków
-        "/download/gfx/opole/pl/defaultstronaopisowa/1226/1/1/title_1.png",
-        "/download/gfx/opole/pl/defaultstronaopisowa/1226/1/1/title_2.png",
-        "/download/gfx/opole/pl/defaultstronaopisowa/1226/1/1/title_3.png",
-        "/download/gfx/opole/pl/defaultstronaopisowa/1226/1/1/title_4.png",
-        "/download/gfx/opole/pl/defaultstronaopisowa/1226/1/1/title_5.png",
-        "/download/gfx/opole/pl/defaultstronaopisowa/1226/1/1/title_6.png",
-        "/download/gfx/opole/pl/defaultstronaopisowa/1226/1/1/title_7.png",
-        "/download/gfx/opole/pl/defaultstronaopisowa/1226/1/1/title_8.png",
-        "/download/gfx/opole/pl/defaultstronaopisowa/1226/1/1/title_9.png",
-        "/download/gfx/opole/pl/defaultstronaopisowa/1226/1/1/title_10.png"
+        "image/title_1.png",
+        "image/title_2.png",
+        "image/title_3.png",
+        "image/title_4.png",
+        "image/title_5.png",
+        "image/title_6.png",
+        "image/title_7.png",
+        "image/title_8.png",
+        "image/title_9.png",
+        "image/title_10.png"
     ],
     canGet : true, //czy można klikać na kafelki
     tilePairs : 0, //liczba dopasowanych kafelkow
@@ -82,8 +82,8 @@ const memoryGame = {
     },
 
     resetTiles() {
-        this.tilesChecked[0].style.backgroundImage = "url(/download/gfx/opole/pl/defaultstronaopisowa/1226/1/1/title.png)";
-        this.tilesChecked[1].style.backgroundImage = "url(/download/gfx/opole/pl/defaultstronaopisowa/1226/1/1/title.png)";
+        this.tilesChecked[0].style.backgroundImage = "url(image/title.png)";
+        this.tilesChecked[1].style.backgroundImage = "url(image/title.png)";
 
         this.tilesChecked = [];
         this.canGet = true;
