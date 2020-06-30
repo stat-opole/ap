@@ -132,7 +132,10 @@ const memoryGame = {
         }
     }
 };
-
+document.addEventListener("DOMContentLoaded", function() {
+    const startBtn = document.querySelector(".game-start");
+    startBtn.addEventListener("click", () => memoryGame.startGame());
+});
 
 </script>
 </body>
