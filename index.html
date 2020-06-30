@@ -29,16 +29,16 @@ const memoryGame = {
     moveCount : 0, //liczba ruchów
     dataczas : 0, //data i czas
     tilesImg : [ //grafiki dla klocków
-        "image/title_1.png",
-        "image/title_2.png",
-        "image/title_3.png",
-        "image/title_4.png",
-        "image/title_5.png",
-        "image/title_6.png",
-        "image/title_7.png",
-        "image/title_8.png",
-        "image/title_9.png",
-        "image/title_10.png"
+        "images/title_1.png",
+        "images/title_2.png",
+        "images/title_3.png",
+        "images/title_4.png",
+        "images/title_5.png",
+        "images/title_6.png",
+        "images/title_7.png",
+        "images/title_8.png",
+        "images/title_9.png",
+        "images/title_10.png"
     ],
     canGet : true, //czy można klikać na kafelki
     tilePairs : 0, //liczba dopasowanych kafelkow
@@ -82,8 +82,8 @@ const memoryGame = {
     },
 
     resetTiles() {
-        this.tilesChecked[0].style.backgroundImage = "url(image/title.png)";
-        this.tilesChecked[1].style.backgroundImage = "url(image/title.png)";
+        this.tilesChecked[0].style.backgroundImage = "url(images/title.png)";
+        this.tilesChecked[1].style.backgroundImage = "url(images/title.png)";
 
         this.tilesChecked = [];
         this.canGet = true;
