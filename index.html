@@ -2,10 +2,15 @@
 <head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script></head>
 <body>
+
+<label id="lbltipAddedComment"></label>
+<button onclick="myFunction()">Try it</button>
 <script>
-var plaintext="hiii";
+function myFunction() {
+var tekst = "Do zaszyfrowania";
 var encrptedText = CryptoJS.MD5(plaintext)
-alert("Encrpted Text : "+ encrptedText.toString());
+document.getElementById('lbltipAddedComment').innerHTML = "Encrpted Text : "+ encrptedText.toString();
+}
 </script>
  </body>
 </html>
