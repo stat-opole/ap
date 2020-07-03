@@ -1,16 +1,28 @@
 ﻿<html>
 <head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script></head>
+<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script>
 <body>
 
-<label id="lbltipAddedComment"></label>
-<button onclick="myFunction()">Try it</button>
+
+
+
+<label id="aesprzed">cc</label>
+<label id="aespo">vv</label>
+<button onclick="myFunctionaes()">Try it</button>
+
+
 <script>
-function myFunction() {
-var tekst = "Do zaszyfrowania";
-var encrptedText = CryptoJS.MD5(tekst)
-document.getElementById('lbltipAddedComment').innerHTML = "Encrpted Text : "+ encrptedText.toString();
+function myFunctionaes() {
+    var encryptedAES = CryptoJS.AES.encrypt("Message", "My Secret Passphrase");
+    //var decryptedBytes = CryptoJS.AES.decrypt(encryptedAES, "My Secret Passphrase");
+    //var plaintext = decryptedBytes.toString(CryptoJS.enc.Utf8);
+	document.getElementById('aesprzed').innerHTML = 'aas';
 }
 </script>
+
+
+
+
+
+
  </body>
-</html>
