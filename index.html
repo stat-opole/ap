@@ -1,4 +1,6 @@
-﻿<head>
+﻿
+
+<head>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
@@ -7,15 +9,39 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/pbkdf2.js"></script>
   </head>
 
-<label id="lbltipAddedComment"></label>
-<button onclick="myFunction()">Try it</button>
-<script>
-function myFunction() {
-var crypted = CryptoJS.AES.encrypt("kurka", "123", "{ mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 }");
+hasło: <input type="text" id="pass"><br>
+klucz: <input type="text" id="key"><br><br>
+<button onclick="szyfruj()">Szyfruj</button><br>
 
-        var plain = CryptoJS.AES.decrypt(crypted, "123", "{ mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 }");
-document.getElementById('lbltipAddedComment').innerHTML = "Encrpted Text : "+ plain.toString(CryptoJS.enc.Utf8);
+zaszyfrowane: <label id="zaszyfrowane"></label><bR><br>
+
+wprowadź szyfr: <input type="text" id="szyfr"><br><br>
+<button onclick="odszyfruj()">Odszyfruj</button><br>
+
+odszyfrowane: <label id="odszyfrowane"></label><bR>
+
+
+
+<script>
+function szyfruj() {
+
+var pass = document.getElementById("pass").value;
+var key = document.getElementById("key").value;
+var crypted = CryptoJS.AES.encrypt(pass, key, "{ mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 }");
+document.getElementById('zaszyfrowane').innerHTML = crypted;
 }
+
+function odszyfruj() {
+var szyfr = document.getElementById("szyfr").value;
+var key = document.getElementById("key").value;
+
+var plain = CryptoJS.AES.decrypt(szyfr, key, "{ mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 }");
+
+document.getElementById('odszyfrowane').innerHTML = plain.toString(CryptoJS.enc.Utf8);
+//document.getElementById('odszyfrowane').innerHTML = hash
+}
+
+
+
+
 </script>
- </body>
-</html>
