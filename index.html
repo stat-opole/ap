@@ -1,28 +1,21 @@
-﻿<html>
-<head>
-<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script>
-<body>
+﻿<head>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/pbkdf2.js"></script>
+  </head>
 
-
-
-<label id="aesprzed">cc</label>
-<label id="aespo">vv</label>
-<button onclick="myFunctionaes()">Try it</button>
-
-
+<label id="lbltipAddedComment"></label>
+<button onclick="myFunction()">Try it</button>
 <script>
-function myFunctionaes() {
-    var encryptedAES = CryptoJS.AES.encrypt("Message", "My Secret Passphrase");
-    //var decryptedBytes = CryptoJS.AES.decrypt(encryptedAES, "My Secret Passphrase");
-    //var plaintext = decryptedBytes.toString(CryptoJS.enc.Utf8);
-	document.getElementById('aesprzed').innerHTML = 'aas';
+function myFunction() {
+var crypted = CryptoJS.AES.encrypt("kurka", "123", "{ mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 }");
+
+        var plain = CryptoJS.AES.decrypt(crypted, "123", "{ mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 }");
+document.getElementById('lbltipAddedComment').innerHTML = "Encrpted Text : "+ plain.toString(CryptoJS.enc.Utf8);
 }
 </script>
-
-
-
-
-
-
  </body>
+</html>
