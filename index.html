@@ -7,8 +7,9 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/pbkdf2.js"></script>
+  <script src="ieUserAgent.js" type="text/javascript"></script>
   </head>
-
+<div id="results">Results:</div>
 hasło: <input type="text" id="pass"><br>
 klucz: <input type="text" id="key"><br><br>
 <button onclick="szyfruj()">Szyfruj</button><br>
@@ -23,6 +24,12 @@ odszyfrowane: <label id="odszyfrowane"></label><bR>
 
 
 <script>
+
+    var val = "IE" + ieUserAgent.version;
+    if (ieUserAgent.compatibilityMode)
+        val += " Compatibility Mode (IE" + ieUserAgent.renderVersion + " emulation)";
+    $("#results").html("We have detected the following IE browser: " + val);
+
 function szyfruj() {
 
 var pass = document.getElementById("pass").value;
